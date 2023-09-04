@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sirenita4_app.Views.Agregar2">
+    <ScrollView>
+        <StackLayout BackgroundColor="Aqua">
+            <Label Text="Agrege Usuario"
+       FontSize="40"
+       FontAttributes="Bold"
+       Margin="0,0,0,0"
+       HorizontalOptions="Center"/>
+            <Frame VerticalOptions="FillAndExpand"
+               Margin="20"
+               CornerRadius="20"
+               HasShadow="False">
+                <StackLayout VerticalOptions="Center"
+                 Spacing="20">
+                    <Label Text="Ingrese datos" HorizontalOptions="CenterAndExpand" Margin="0,10"/>
+
+                    <Label Text="Nombre:"/>
+                    <Entry x:Name="_nombreEntry" Placeholder="Ingrese su nombre" TextChanged="NombreEntry_TextChanged"/>
+
+                    <Label Text="Apellidos:"/>
+                    <Entry x:Name="_apellidoEntry" Placeholder="Ingrese sus apellidos" TextChanged="ApellidosEntry_TextChanged"/>
+
+                    <Label Text="Correo:"/>
+                    <Entry x:Name="_correoEntry" Placeholder="Ingrese su correo electrónico" Keyboard="Email"/>
+
+                    <Label Text="Teléfono:"/>
+                    <Entry x:Name="_telefonoEntry" Placeholder="Ingrese su número de teléfono" Keyboard="Telephone" TextChanged="TelefonoEntry_TextChanged"/>
+
+                    <Label Text="Edad:"/>
+                    <Entry x:Name="_edadEntry" Placeholder="Ingrese su edad" Keyboard="Numeric" TextChanged="EdadEntry_TextChanged" MaxLength="2"/>
+
+                    <Button Text="Guardar"
+                        TextTransform="None"
+                        BackgroundColor="Aqua"
+                        CornerRadius="10"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        Clicked="Button_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

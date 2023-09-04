@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sirenita4_app.Views.Principal"
+             Title="Master">
+
+    <StackLayout BackgroundColor="#33FFB2">
+        <Label Text="Elija su opcion"
+           FontSize="40"
+           FontAttributes="Bold"
+           Margin="0,20,0,0"
+           HorizontalOptions="Center"/>
+        <Frame VerticalOptions="FillAndExpand"
+           Margin="20"
+           CornerRadius="20"
+           HasShadow="False">
+            <StackLayout VerticalOptions="Center"
+                     Spacing="20">
+                <Button Text="Cliente"
+                    TextTransform="None"
+                    BackgroundColor="#33FFB2"
+                    CornerRadius="10"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    x:Name="btnregistro"
+                    Clicked="btnregistro_Clicked"/>
+
+                <Button Text="Editar"
+                        TextTransform="None"
+                        BackgroundColor="#33FFB2"
+                        CornerRadius="10"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        x:Name="btneditar"
+                        Clicked="btneditar_Clicked"/>
+
+                <Button Text="Listar"
+                        TextTransform="None"
+                        BackgroundColor="#33FFB2"
+                        CornerRadius="10"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        x:Name="btnlistar"
+                        Clicked="btnlistar_Clicked"/>
+
+                <Button Text="Eliminar"
+                        TextTransform="None"
+                        BackgroundColor="#33FFB2"
+                        CornerRadius="10"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        x:Name="btneliminar"
+                        Clicked="btneliminar_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentPage>

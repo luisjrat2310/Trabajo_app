@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Sirenita4_app.Models;assembly=Sirenita4_app"
+             x:Class="Sirenita4_app.Views.Editar2">
+    <ScrollView>
+        <StackLayout BackgroundColor="Green" Padding="20">
+            <Label Text="Actualice Usuario"
+                   FontSize="40"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <ListView x:Name="_listView" ItemSelected="_listView_ItemSelected">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type local:registro}" />
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding nombre}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Frame VerticalOptions="FillAndExpand"
+                   CornerRadius="20"
+                   HasShadow="False">
+                <StackLayout VerticalOptions="CenterAndExpand" Spacing="20">
+                    <Label Text="Ingrese datos" HorizontalOptions="Center" Margin="0,10"/>
+                    <Label Text="Nombre:"/>
+                    <Entry x:Name="_nombreEntry" Placeholder="Ingrese su nombre" TextChanged="NombreEntry_TextChanged"/>
+                    <Label Text="Apellidos:"/>
+                    <Entry x:Name="_apellidoEntry" Placeholder="Ingrese sus apellidos" TextChanged="ApellidosEntry_TextChanged"/>
+                    <Label Text="Correo:"/>
+                    <Entry x:Name="_correoEntry" Placeholder="Ingrese su correo electrónico" Keyboard="Email"/>
+                    <Label Text="Teléfono:"/>
+                    <Entry x:Name="_telefonoEntry" Placeholder="Ingrese su número de teléfono" Keyboard="Telephone" TextChanged="TelefonoEntry_TextChanged"/>
+                    <Label Text="Edad:"/>
+                    <Entry x:Name="_edadEntry" Placeholder="Ingrese su edad" Keyboard="Numeric" TextChanged="EdadEntry_TextChanged"/>
+                    <Button Text="Guardar"
+                            TextTransform="None"
+                            BackgroundColor="Black"
+                            CornerRadius="10"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            Clicked="_actualizarButton_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
